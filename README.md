@@ -2,7 +2,7 @@
 
 This application was generated using JHipster 8.11.0, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v8.11.0](https://www.jhipster.tech/documentation-archive/v8.11.0).
 
-##website appearance and funtion
+## website appearance and funtion
 ![Accordion Image](./img/accordion.png)
 ![Accordion Image](./img/carousel.png)
 ![Accordion Image](./img/progress bar.png)
