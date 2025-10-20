@@ -1,0 +1,44 @@
+<form>
+  <div class="mb-3 row">
+    <label for="table-filtering-search" class="col-xs-3 col-sm-auto col-form-label">Full text search:</label>
+    <div class="col-xs-3 col-sm-auto">
+      <input id="table-filtering-search" class="form-control" type="text" [formControl]="filter" />
+    </div>
+  </div>
+</form>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">subregions</th>
+      <th scope="col">baseline</th>
+      <th scope="col">target</th>
+      <th scope="col">attendance</th>
+      <th scope="col">GrowthRate</th>
+      <th scope="col">MorningandEveningRevival</th>
+      <th scope="col">MERRate</th>
+      <th scope="col">PrayerMeeting</th>
+      <th scope="col">PMRate</th>
+      <th scope="col">BaptismCumulative</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let report of lookingfor$ | async; let i = index">
+      <td><ngb-highlight [result]="report.subregions" [term]="filter.value"></ngb-highlight></td>
+      <td><ngb-highlight [result]="report.baseline.toString()" [term]="filter.value"></ngb-highlight></td>
+      <td><ngb-highlight [result]="report.target.toString()" [term]="filter.value"></ngb-highlight></td>
+      <td><ngb-highlight [result]="report.attendance.toString()" [term]="filter.value"></ngb-highlight></td>
+      <td><ngb-highlight [result]="report.GrowthRate.toString()" [term]="filter.value"></ngb-highlight></td>
+      <td><ngb-highlight [result]="report.MorningandEveningRevival.toString()" [term]="filter.value"></ngb-highlight></td>
+      <td><ngb-highlight [result]="report.MERRate.toString()" [term]="filter.value"></ngb-highlight></td>
+      <td><ngb-highlight [result]="report.PrayerMeeting.toString()" [term]="filter.value"></ngb-highlight></td>
+      <td><ngb-highlight [result]="report.PMRate.toString()" [term]="filter.value"></ngb-highlight></td>
+      <td><ngb-highlight [result]="report.BaptismCumulative.toString()" [term]="filter.value"></ngb-highlight></td>
+    </tr>
+  </tbody>
+</table>
+<p>
+  Items in red: Shepherding below 80%, Perfecting below 40%, Visiting below 40%, Baptism 0 <br />標紅色為: 牧養低於80% 成全低於40%
+  出訪低於40% 受浸0
+</p>
