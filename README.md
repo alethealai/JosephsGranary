@@ -2,6 +2,11 @@
 
 This application was generated using JHipster 8.11.0, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v8.11.0](https://www.jhipster.tech/documentation-archive/v8.11.0).
 
+##website appearance and funtion
+![Accordion Image](./img/accordion.png)
+![Accordion Image](./img/carousel.png)
+![Accordion Image](./img/progress bar.png)
+![Accordion Image](./img/search bar.png)
 ## Project Structure
 
 Node is required for generation and recommended for development. `package.json` is always generated for a better development experience with prettier, commit hooks, scripts and so on.
