@@ -1,162 +1,63 @@
-<!-- <div class="row">
-  <div class="col-md-3">
-    <span class="hipster img-fluid rounded"></span>
-  </div>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JosephsGranary</title>
+  </head>
 
-  <div class="col-md-9">
-    <h1 class="display-4"><span jhiTranslate="home.title">Java 文青，歡迎!</span> (Josephs Granary)</h1>
-
-    <p class="lead" jhiTranslate="home.subtitle">這裡是您的首頁</p>
-
-    <div>
-      @if (account() !== null) {
-        <div class="alert alert-success">
-          @if (account(); as accountRef) {
-            <span id="home-logged-message" jhiTranslate="home.logged.message" [translateValues]="{ username: accountRef.login }"
-              >您目前是用 “{{ accountRef.login }}” 帳號登入。</span
-            >
-          }
-        </div>
-      } @else {
-        <div class="alert alert-warning">
-          <span jhiTranslate="global.messages.info.authenticated.prefix">如果您要</span>
-          <a class="alert-link" (click)="login()" jhiTranslate="global.messages.info.authenticated.link">登入</a
-          ><span jhiTranslate="global.messages.info.authenticated.suffix"
-            >，可以使用預設帳號:<br />- 管理員 (帳號是 &quot;admin&quot;，密碼是 &quot;admin&quot;) <br />- 使用者 (帳號
-            &quot;user&quot;，密碼是 &quot;user&quot;)。</span
-          >
-        </div>
-      }
-    </div>
-
-    <p jhiTranslate="home.question">要是您對 JHipster 有任何疑問，可以到:</p>
-
-    <ul>
-      <li>
-        <a href="https://www.jhipster.tech/" target="_blank" rel="noopener noreferrer" jhiTranslate="home.link.homepage">JHipster 首頁</a>
+  <body>
+    <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+      <li [ngbNavItem]="1">
+        <a ngbNavLink>One</a>
+        <ng-template ngbNavContent>
+          <p>
+            Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse.
+            Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby
+            sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan
+            american apparel, butcher voluptate nisi qui.
+          </p>
+        </ng-template>
       </li>
-      <li>
-        <a
-          href="https://stackoverflow.com/tags/jhipster/info"
-          target="_blank"
-          rel="noopener noreferrer"
-          jhiTranslate="home.link.stackoverflow"
-          >Stack Overflow 上標有 JHipster 的問題</a
-        >
+
+      <li [ngbNavItem]="2">
+        <a ngbNavLink>carousel img</a>
+        <ng-template ngbNavContent>
+          <div>
+            <jhi-carousel></jhi-carousel>
+          </div>
+        </ng-template>
       </li>
-      <li>
-        <a
-          href="https://github.com/jhipster/generator-jhipster/issues?state=open"
-          target="_blank"
-          rel="noopener noreferrer"
-          jhiTranslate="home.link.bugtracker"
-          >JHipster 議題管理</a
-        >
+
+      <li [ngbNavItem]="3">
+        <a ngbNavLink>ChurchReport</a>
+        <ng-template ngbNavContent>
+          <div>
+            <jhi-table></jhi-table>
+          </div>
+        </ng-template>
       </li>
-      <li>
-        <a href="https://gitter.im/jhipster/generator-jhipster" target="_blank" rel="noopener noreferrer" jhiTranslate="home.link.chat"
-          >JHipster 公開聊天室</a
-        >
+
+      <li [ngbNavItem]="4">
+        <a ngbNavLink>accordion</a>
+        <ng-template ngbNavContent>
+          <div>
+            <jhi-accordion></jhi-accordion>
+          </div>
+        </ng-template>
       </li>
-      <li>
-        <a href="https://twitter.com/jhipster" target="_blank" rel="noopener noreferrer" jhiTranslate="home.link.follow"
-          >在 Twitter 上關注 &#64;jhipster</a
-        >
+
+      <li [ngbNavItem]="5">
+        <a ngbNavLink>progressbar</a>
+        <ng-template ngbNavContent>
+          <div>
+            <jhi-progressbar></jhi-progressbar>
+          </div>
+        </ng-template>
       </li>
     </ul>
+    <div [ngbNavOutlet]="nav" class="mt-2"></div>
 
-    <p>
-      <span jhiTranslate="home.like">如果您喜歡 JHipster，別忘了給我們星星，馬上連到</span>
-      <a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener noreferrer" jhiTranslate="home.github"
-        >GitHub</a
-      >!
-    </p>
-  </div>
-</div> -->
-
-<!-- <html>
-<head>
-  <meta charset="UTF-8">
-  <title>我的網頁</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
-</head> -->
-
-<!-- <div class="normal-font">
-  <h1 class="">開始積蓄自己的七個豐年吧!</h1>
-  <a title="速速開始讀經" class="bible-link" active="true" href="https://line.twgbr.org/recoveryversion/bible/">舊約</a>
-  <b></b><a style="color:rgb(195, 0, 255);font-size:30px;" href="https://line.twgbr.org/recoveryversion/bible/">新約</a>
-
-  <br>
-  <p class="specailfont">
-    平靜風暴
-  </p>
-
-  <hr>
-
-  <button [class]="{'activate-btn': btnClicked}" (click)="btnClicked = !btnClicked">
-    THIS IS A BUTTON {{btnClicked}}
-  </button>
-  <p>
-    但那落在好土裏的，就是人用美好善良的心聽了道，便持守住，並且忍耐著結實。
-  </p>
-  <a href="https://www.nasa.gov/" target="_blank">
-    <img src="content/images/aletheawithstar.jpg" alt="alethea123" width="100" height="140">
-  </a>
-   <a href="mailto:s111319027@stu.ntue.edu.tw?subject=問候&body=早安午安晚安。">寄信給爾和</a>
-<button onclick="document.location='https://www.nasa.gov/'">nasa</button>
-
-</div> -->
-<br />
-<ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
-  <li [ngbNavItem]="1">
-    <a ngbNavLink>One</a>
-    <ng-template ngbNavContent>
-      <p>
-        Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse.
-        Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater
-        eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american
-        apparel, butcher voluptate nisi qui.
-      </p>
-    </ng-template>
-  </li>
-
-  <li [ngbNavItem]="2">
-    <a ngbNavLink>carousel img</a>
-    <ng-template ngbNavContent>
-      <div>
-        <jhi-carousel></jhi-carousel>
-      </div>
-    </ng-template>
-  </li>
-
-  <li [ngbNavItem]="3">
-    <a ngbNavLink>ChurchReport</a>
-    <ng-template ngbNavContent>
-      <div>
-        <jhi-table></jhi-table>
-      </div>
-    </ng-template>
-  </li>
-
-  <li [ngbNavItem]="4">
-    <a ngbNavLink>accordion</a>
-    <ng-template ngbNavContent>
-      <div>
-        <jhi-accordion></jhi-accordion>
-      </div>
-    </ng-template>
-  </li>
-
-  <li [ngbNavItem]="5">
-    <a ngbNavLink>progressbar</a>
-    <ng-template ngbNavContent>
-      <div>
-        <jhi-progressbar></jhi-progressbar>
-      </div>
-    </ng-template>
-  </li>
-</ul>
-<div [ngbNavOutlet]="nav" class="mt-2"></div>
-
-<pre>Active: {{ active }}</pre>
+    <!-- <pre>Active: {{ active }}</pre> -->
+  </body>
+</html>

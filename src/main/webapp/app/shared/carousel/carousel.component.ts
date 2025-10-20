@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
 export class CarouselComponent {
   // 圖片的網址列表
   // https://picsum.photos/id/圖片編號/寬度/高度
-  images = [62, 83, 466, 965, 982, 1043, 738].map(n => `https://picsum.photos/id/${n}/900/500`);
+  images = [62, 83, 466, 965, 982, 1043, 738].map(n => `https://picsum.photos/id/${n}/1500/500`);
 
   paused = false;
   unpauseOnArrow = false;
